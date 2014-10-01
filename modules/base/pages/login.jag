@@ -6,5 +6,8 @@ layout('index')
         .add('secondary-menu')
         .area('header')
         .add('navigation')
+        .area('body')
+        .add('dashboard')
+        .add('stats-table')
         .render();
 %>
