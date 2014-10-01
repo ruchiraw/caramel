@@ -1,0 +1,10 @@
+<%
+var layout = require('/caramel.js').layout;
+layout('index')
+        .area('left')
+        .add('primary-menu', {})
+        .add('secondary-menu')
+        .area('header')
+        .add('navigation')
+        .render();
+%>

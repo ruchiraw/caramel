@@ -1,0 +1,7 @@
+<%
+var layout = require('/caramel.js').layout;
+layout('index')
+        .area('header')
+        .add('navigation')
+        .render();
+%>

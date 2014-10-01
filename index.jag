@@ -1,0 +1,4 @@
+<%
+var caramel = require('/caramel.js');
+caramel.serve(request, response);
+%>
