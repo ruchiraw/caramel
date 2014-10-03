@@ -12,4 +12,3 @@ on('menu primary', function(menu) {
         href: '/login'
     });
 });
-

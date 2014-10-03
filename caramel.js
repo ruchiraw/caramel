@@ -162,3 +162,12 @@ var layout = function (name) {
 var layoutFile = function (theme, layout) {
     return '/themes/' + theme + '/layouts/' + layout + '.jag';
 };
+
+/**
+ if we have blocks at top, then a block with just hooks doesn't fit there
+ as users will see no difference between a block with uis and a block with
+ just hooks
+
+ at the moment, block names are in a single namespace, but would be better to qualify them
+ with the module name
+ */

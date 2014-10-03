@@ -5,5 +5,7 @@ layout('index')
         .add('primary-menu', {})
         .area('header')
         .add('navigation')
+        .area('body')
+        .add('dashboard')
         .render();
 %>
