@@ -1,0 +1,5 @@
+<%
+    session.remove('user');
+    response.sendRedirect('/caramel/index');
+    exit();
+%>

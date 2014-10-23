@@ -1,0 +1,12 @@
+<%
+(function () {
+    var config = component.config('theme');
+    var theme = config.active;
+    var path = '/themes/' + theme + '/js/scripts.js';
+    if (new File(path).isExists()) {
+        print('<script>');
+        include(path);
+        print('</script>');
+    }
+}());
+%>

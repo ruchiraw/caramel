@@ -1,29 +1,23 @@
-<!-- TODO feature inclusion like sso etc. -->
-<% component.include('login', 'authenticate'); %>
 <% component.include('app', 'common'); %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Dashboard Template for Bootstrap</title>
     <% component.include('app', 'header'); %>
-    <% component.themeStyles(); %>
+    <% component.styles('login', 'facebook'); %>
   </head>
   <body>
     <% component.include('navigation', 'top', navigation.top); %>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <% component.include('navigation', 'side', navigation.side); %>
-        </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <!-- TODO include with the context -->
-            <% component.include('usage-dashboard', 'charts'); %>
-            <% component.include('usage-dashboard', 'table'); %>
+            <% component.include('login', 'facebook'); %>
+            <% component.include('login', 'local'); %>
             <% component.include('footer'); %>
         </div>
       </div>
     </div>
     <% component.include('app', 'footer'); %>
-    <% component.themeScripts(); %>
+    <% component.scripts('login', 'facebook'); %>
   </body>
 </html>

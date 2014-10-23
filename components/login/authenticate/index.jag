@@ -1,0 +1,7 @@
+<%
+var user = session.get('user');
+if (!user) {
+    response.sendRedirect('/caramel/login');
+    exit();
+}
+%>

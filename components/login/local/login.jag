@@ -1,0 +1,11 @@
+<%
+var log = new Log();
+var username = request.getParameter('username');
+var password = request.getParameter('password');
+if (username === password) {
+    session.put('user', username);
+    response.sendRedirect('/caramel/index');
+    exit();
+}
+response.sendRedirect('/caramel/login');
+%>

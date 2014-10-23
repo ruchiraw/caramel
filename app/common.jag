@@ -1,0 +1,14 @@
+<%
+var navigation = {};
+
+navigation.top = {
+    siteName: 'WSO2 API Manager',
+    links: [
+        { title: 'Home', url: '/caramel/index'},
+        { title: 'Login', url: '/caramel/login'},
+        { title: 'Logout', url: '/caramel/components/login/local/logout'}
+    ]
+};
+
+navigation.side = [];
+%>

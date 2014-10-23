@@ -1,0 +1,9 @@
+<div class="container-fluid footer">
+     <ul>
+         <li style="font-weight:bold;"><a href="/subscribe/">Subscribe to the newsletter</a></li>
+        <li><a href="http://wso2.com/terms-of-use">Legal</a></li>
+        <li><a href="http://wso2.com/privacy-policy">Privacy</a></li>
+        <li><a href="mailto:human-response@wso2.com">Report a problem with this page</a></li>
+    </ul>
+    <span>©2014 WSO2</span>
+</div>

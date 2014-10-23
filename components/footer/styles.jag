@@ -1,0 +1,7 @@
+<style type="text/css">
+        .footer li {
+            float: left;
+            list-style: none;
+            margin: 10px;
+        }
+</style>

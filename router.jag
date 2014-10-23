@@ -1,0 +1,78 @@
+<%
+var component = require('/component.js');
+
+(function () {
+    var log = new Log();
+
+    var compDir = '/components';
+
+    var baseDir = function (comp, path) {
+        return compDir + '/' + path;
+    };
+
+    var statik = function (req, res, path) {
+        //TODO: optimize this
+        var file;
+        if (path.match(/(.js)$/ig)) {
+            //js file
+            file = new File(path);
+            if (!file.isExists() || file.isDirectory()) {
+                return false;
+            }
+            res.contentType = 'application/javascript';
+            print(file.getStream());
+            return true;
+        }
+        if (path.match(/(.css)$/ig)) {
+            //css file
+            file = new File(path);
+            if (!file.isExists() || file.isDirectory()) {
+                return false;
+            }
+            res.contentType = 'text/css';
+            print(file.getStream());
+            return true;
+        }
+        return false;
+    };
+
+    var serve = function (req, res) {
+        var file;
+        var path = req.getRequestURI();
+        var context = req.getContextPath();
+        path = path.substring(context.length);
+        if (statik(req, res, path)) {
+            return;
+        }
+        var compDir = new File('/components');
+        if (!compDir.isExists() || !compDir.isDirectory()) {
+            log.error('components directory cannot found');
+            return;
+        }
+        file = new File(path);
+        if (!file.isExists()) {
+            //TODO: is this correct
+            path = path + '.jag';
+            file = new File(path);
+            if (!file.isExists()) {
+                return;
+            }
+        }
+        if (file.isDirectory()) {
+            //TODO: handle index.jag
+        }
+        include(path);
+    };
+
+    serve(request, response);
+
+    /**
+     if we have blocks at top, then a block with just hooks doesn't fit there
+     as users will see no difference between a block with uis and a block with
+     just hooks
+
+     at the moment, block names are in a single namespace, but would be better to qualify them
+     with the module name
+     */
+}());
+%>

@@ -1,0 +1,18 @@
+<script type="application/javascript">
+    $(function() {
+        $('h2').click(function() {
+            console.log($(this).text());
+        });
+
+        /*$('.form-signin button').click(function() {
+            var form = $('.form-signin');
+            $.post('/caramel/components/login/local/login', {
+                username: $('.username', form).val(),
+                password: $('.password', form).val()
+            }, function(data) {
+                console.log(data);
+            });
+            return false;
+        });*/
+    });
+</script>
