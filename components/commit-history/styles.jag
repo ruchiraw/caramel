@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="/caramel/components/commit-history/demo.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/caramel/components/commit-history/demo-print.css" type="text/css" media="print">
+<style type="text/css" media="screen">
+    #holder {
+        height: 250px;
+        width: 800px;
+    }
+</style>

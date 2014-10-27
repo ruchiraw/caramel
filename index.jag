@@ -1,11 +1,14 @@
 <!-- TODO feature inclusion like sso etc. -->
 <% component.include('login', 'authenticate'); %>
-<% component.include('app', 'common'); %>
+<% include('/includes/common.jag'); %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Dashboard Template for Bootstrap</title>
-    <% component.include('app', 'header'); %>
+    <% include('/includes/header.jag'); %>
+    <% component.styles('commit-history'); %>
+    <% component.styles('current-time'); %>
+    <% component.styles('usage-dashboard'); %>
     <% component.themeStyles(); %>
   </head>
   <body>
@@ -17,13 +20,16 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <!-- TODO include with the context -->
+            <% component.include('commit-history'); %>
+            <% component.include('current-time'); %>
             <% component.include('usage-dashboard', 'charts'); %>
             <% component.include('usage-dashboard', 'table'); %>
-            <% component.include('footer'); %>
         </div>
       </div>
     </div>
-    <% component.include('app', 'footer'); %>
+    <% include('/includes/footer.jag'); %>
+    <% component.scripts('commit-history'); %>
+    <% component.scripts('current-time'); %>
     <% component.themeScripts(); %>
   </body>
 </html>

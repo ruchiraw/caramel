@@ -1,9 +1,9 @@
-<% component.include('app', 'common'); %>
+<% include('/includes/common.jag'); %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Dashboard Template for Bootstrap</title>
-    <% component.include('app', 'header'); %>
+    <% include('/includes/header.jag'); %>
     <% component.styles('login', 'facebook'); %>
   </head>
   <body>
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <% component.include('app', 'footer'); %>
+    <% include('/includes/footer.jag'); %>
     <% component.scripts('login', 'facebook'); %>
   </body>
 </html>

@@ -44,5 +44,12 @@ and fallback to styles.css
 
 
 
-import as a var
+automatically adding variables might not be good as it might get conflicted with existing local vars
+importing and assigning into a variable might be good, but again current approach is more maintainable
+
+do we need to componetize jquery like stuff too? In that case, stuff might get complicated to understand
+
+js/css dependency management from different components. i.e. different components includes the same *.js or different 
+versions of the same *.js component
+
 

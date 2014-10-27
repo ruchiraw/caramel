@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/caramel/components/commit-history/demo.css" media="screen">
+<link rel="stylesheet" href="/caramel/components/commit-history/demo-print.css" media="print">
+<style media="screen">
+    #time-holder {
+        height: 600px;
+        width: 600px;
+    }
+    #time {
+        font: 100 3em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+</style>

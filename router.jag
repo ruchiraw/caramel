@@ -1,13 +1,13 @@
 <%
-var component = require('/component.js');
+var component = require('/components/component.js');
 
 (function () {
     var log = new Log();
 
-    var compDir = '/components';
+    var compPath = '/components';
 
     var baseDir = function (comp, path) {
-        return compDir + '/' + path;
+        return compPath + '/' + path;
     };
 
     var statik = function (req, res, path) {
@@ -44,7 +44,7 @@ var component = require('/component.js');
         if (statik(req, res, path)) {
             return;
         }
-        var compDir = new File('/components');
+        var compDir = new File(compPath);
         if (!compDir.isExists() || !compDir.isDirectory()) {
             log.error('components directory cannot found');
             return;
@@ -65,14 +65,5 @@ var component = require('/component.js');
     };
 
     serve(request, response);
-
-    /**
-     if we have blocks at top, then a block with just hooks doesn't fit there
-     as users will see no difference between a block with uis and a block with
-     just hooks
-
-     at the moment, block names are in a single namespace, but would be better to qualify them
-     with the module name
-     */
 }());
 %>

@@ -1,0 +1,5 @@
+{
+    "name": "usage-dashboard",
+    "version": "1.0.0",
+    "styles": ["dashboard.css"]
+}
