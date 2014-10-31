@@ -1,0 +1,15 @@
+.centered-form {
+    margin-top: 60px;
+}
+
+.centered-form .panel {
+    background: rgba(255, 255, 255, 0.8);
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0 0 3px 3px #888;
+    -webkit-box-shadow: 0 0 3px 3px #888;
+    box-shadow: 0 0 3px 3px #888;
+}
+
+.centered-form .list-group-item {
+    background-color: inherit;
+}

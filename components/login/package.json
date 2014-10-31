@@ -1,6 +1,7 @@
 {
     "name": "login",
     "version": "1.0.0",
+    "styles": ["index.css"],
     "dependencies": {
         "jquery": "1.0.0"
     }

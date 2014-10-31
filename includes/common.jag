@@ -2,7 +2,7 @@
 var navigation = {};
 
 navigation.top = {
-    siteName: 'WSO2 API Manager',
+    siteName: 'WSO2 Cloud',
     links: [
         { title: 'Home', url: '/caramel/index'},
         { title: 'Login', url: '/caramel/login'},

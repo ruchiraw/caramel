@@ -1,9 +1,64 @@
-<form class="form-signin" role="form" action="/caramel/components/login/local/login" method="post">
-    <h2 class="form-signin-heading">Please sign in</h2>
-    <input type="text" name="username" class="form-control username" placeholder="Email address" required autofocus>
-    <input type="password" name="password" class="form-control password" placeholder="Password" required>
-    <label class="checkbox">
-        <input type="checkbox" value="remember-me"> Remember me
-    </label>
-    <button class="btn btn-lg btn-primary btn-block signin" type="submit">Sign in</button>
-</form>
+<div class="container-fluid">
+    <div class="row centered-form">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h3 class="panel-title">Please sign in for WSO2 Cloud <small>It's free!</small></h3>
+      </div>
+      <div class="panel-body">
+            <form role="form">
+                <div class="social-box">
+                    <div class="row mg-btm">
+                        <div class="col-md-12">
+                        <a href="#" class="btn btn-primary btn-block">
+                          <i class="icon-facebook"></i>    Login with Facebook
+                        </a>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="btn btn-info btn-block" >
+                              <i class="icon-twitter"></i>    Login with Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+      </div>
+
+      <!-- List group -->
+      <ul class="list-group">
+        <li class="list-group-item">
+        <form role="form" action="/caramel/components/login/local/login">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" name="username" class="form-control input-sm" placeholder="Username">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" name="password" class="form-control input-sm" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+            <div class="row mg-btm">
+                <div class="col-md-12">
+            <input type="submit" value="Sign In" class="btn btn-info btn-block">
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        Not yet registered?<a href="/caramel/signup"> Signup here</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </li>
+      </ul>
+    </div>
+    </div>
+</div>

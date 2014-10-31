@@ -43,7 +43,7 @@ var styles, scripts, config, themeScripts, themeStyles, path,
                 }
                 //get rid of already added styles
                 if (context.styles[dependency]) {
-                    return;
+                    continue;
                 }
                 styleDependencies(dependency, pakage(dependency));
                 context.styles[dependency] = true;
@@ -67,7 +67,7 @@ var styles, scripts, config, themeScripts, themeStyles, path,
                 }
                 //get rid of already added styles
                 if (context.scripts[dependency]) {
-                    return;
+                    continue;
                 }
                 scriptDependencies(dependency, pakage(dependency));
                 context.scripts[dependency] = true;
