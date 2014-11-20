@@ -26,9 +26,9 @@ var styles, scripts, config, themeScripts, themeStyles, path,
     };
 
     var pakage = function (comp) {
-        var path = compFile(comp, 'package.json');
+        var path = compFile(comp, 'component.json');
         if (!new File(path).isExists()) {
-            throw 'Cannot find package.json of the component ' + comp;
+            throw 'Cannot find component.json of the component ' + comp;
         }
         return require(path);
     };
