@@ -1,0 +1,38 @@
+<% include('/includes/common.jag'); %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Enterprise Store | Home</title>
+    <% include('/includes/header.jag'); %>
+    <% component.styles('navigation'); %>
+    <% component.styles('store-asset-nav'); %>
+    <% component.styles('current-time'); %>
+    <% component.themeStyles(); %>
+</head>
+
+<body>
+<% component.include('navigation', 'top', navigation.top); %>
+<% component.include('store-asset-nav'); %>
+<div id="container-assets" class="container">
+    <div class="row">
+        <div class="span9 store-left">
+            {{include body}}
+        </div>
+        <div class="span3 store-right">
+            {{include right}}
+        </div>
+    </div>
+    {{>footer}}
+</div>
+<!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<% include('/includes/footer.jag'); %>
+<% component.scripts('navigation'); %>
+<% component.scripts('store-asset-nav'); %>
+<% component.scripts('current-time'); %>
+<% component.themeScripts(); %>
+</body>
+</html>

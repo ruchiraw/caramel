@@ -1,6 +1,5 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<% component.scripts('bootstrap'); %>
-<script src="/caramel/js/docs.min.js"></script>
+<% component.scripts('bootswatch'); %>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

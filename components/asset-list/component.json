@@ -1,0 +1,9 @@
+{
+    "name": "asset-list",
+    "version": "1.0.0",
+    "scripts": ["index.js"],
+    "styles": ["index.css"],
+    "dependencies": {
+        "bootstrap": "*"
+    }
+}

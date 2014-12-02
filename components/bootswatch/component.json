@@ -1,0 +1,9 @@
+{
+    "name": "bootswatch",
+    "version": "1.0.0",
+    "dependencies": {
+        "bootstrap": "*"
+    },
+    "scripts": ["bootswatch.min.js"],
+    "styles": ["bootswatch.min.css"]
+}

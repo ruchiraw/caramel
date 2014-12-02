@@ -1,0 +1,5 @@
+{
+    "name": "store-asset-nav",
+    "version": "1.0.0",
+    "styles": ["index.css"]
+}

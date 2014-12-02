@@ -1,6 +1,6 @@
 {
     "name": "bootstrap",
-    "version": "3.2.0",
+    "version": "2.2.1",
     "scripts": ["bootstrap.min.js"],
     "styles": ["bootstrap.min.css"],
     "dependencies": {

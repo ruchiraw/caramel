@@ -53,3 +53,6 @@ js/css dependency management from different components. i.e. different component
 versions of the same *.js component
 
 
+component.api('login'); // this is to get currently logged in user from login component to navigation componet.
+
+

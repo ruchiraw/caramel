@@ -1,4 +1,4 @@
-var styles, scripts, config, themeScripts, themeStyles, path,
+var styles, scripts, config, themeScripts, themeStyles, path, api,
     inc = include;
 (function () {
 
@@ -176,6 +176,16 @@ var styles, scripts, config, themeScripts, themeStyles, path,
             data = sub;
         }
         data ? inc(path, data) : inc(path);
+    };
+
+    api = function (comp, sub) {
+        var path;
+        if (typeof sub === 'string' || sub instanceof String) {
+            path = compFile(comp, sub + '/api.js');
+        } else {
+            path = compFile(comp, '/api.js');
+        }
+        return require(path);
     };
 
 }());

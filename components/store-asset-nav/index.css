@@ -1,0 +1,217 @@
+#search {
+    background: none repeat scroll 0 0 #fff;
+    font-size: 18px;
+    height: 39px;
+    position: absolute;
+    right: 0;
+}
+#search:hover {
+    border-color: rgba(44, 50, 57, 0.52);
+}
+#search:focus {
+    background-color: #ffffff;
+}
+.search-dropdown-arrow {
+    position: absolute;
+    z-index: 10;
+}
+.search-dropdown-arrow-single {
+    position: absolute;
+    z-index: 10;
+}
+.search-dropdown-arrow {
+    color: #34495e;
+    opacity: 0.5;
+    padding-top: 4px;
+    position: absolute;
+    right: 45px;
+    top: 4px;
+}
+.search-dropdown-arrow-single {
+    color: #34495e;
+    opacity: 0.5;
+    padding-top: 4px;
+    position: absolute;
+    right: 130px;
+    top: 4px;
+}
+.search-bar {
+    float: none;
+    height: 65px;
+    margin: 0 auto;
+}
+.search-bar .dropdown-toggle:first-child {
+    margin-left: -14px;
+    margin-right: 3px;
+}
+.search-bar .dropdown-toggle {
+    display: block;
+    float: left;
+}
+.search-bar .dropdown {
+    border-right: 1px solid #dadada;
+    color: #34495e;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 49px;
+    list-style: outside none none;
+    margin-right: -3px;
+    opacity: 0.7;
+    padding: 8px 35px;
+    text-align: center;
+}
+.search-bar .dropdown img {
+    display: block;
+    margin: 0 auto;
+}
+.search-bar .dropdown.selected, .search-bar .dropdown.selected:hover {
+    background: none repeat scroll 0 0 #e84c3d;
+    color: #fff;
+    opacity: 1;
+}
+.search-bar .dropdown.selected .dropdown-icon-cont div {
+    background-position: left bottom;
+}
+.search-bar .dropdown:hover {
+    background: none repeat scroll 0 0 #f7f9f9;
+}
+.search-bar .dropdown.selected * {
+    color: #ffffff;
+}
+.search-bar .dropdown i {
+    display: block;
+    font-size: 28px;
+}
+.search-bar .dropdown .dropdown-icon-cont {
+    height: 28px;
+}
+.search-bar .dropdown .dropdown-icon-cont div {
+    display: block;
+    height: 28px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 28px;
+}
+.search-bar .span3 {
+    margin-top: 12px;
+}
+.search-bar .span3-single {
+    margin-top: 12px;
+}
+.search-bar .span8 h2 {
+    font-size: 26px;
+    font-weight: normal;
+    margin-left: -26px;
+    margin-top: 0;
+}
+.search-bar .span8 h2 .selType {
+    color: #a4b6c4;
+}
+.search-bar > .row-fluid {
+}
+.search-bar > .row-fluid > .span3 {
+    position: relative;
+    text-align: right;
+}
+.search-bar > .row-fluid > .span3-single {
+    position: relative;
+    text-align: right;
+}
+.search-dropdown-cont div {
+    text-align: left;
+}
+.search-dropdown-cont-single div {
+    text-align: left;
+}
+.search-dropdown-cont > a {
+    color: #34495e;
+    position: absolute;
+    right: 8px;
+    top: 4px;
+}
+.search-dropdown-cont-single > a {
+    color: #34495e;
+    position: absolute;
+    right: 8px;
+    top: 4px;
+}
+.search-dropdown-cont > label {
+    display: block;
+    font-size: 14px;
+    text-align: left;
+}
+.search-dropdown-cont-single > label {
+    display: block;
+    font-size: 14px;
+    text-align: left;
+}
+#search-button {
+    border-left: 1px solid #cccccc;
+    color: #34495e;
+    font-size: 22px;
+    opacity: 1;
+    padding-left: 7px;
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    transition: opacity 0.4s ease 0s;
+}
+#search-button-single {
+    border-left: 1px solid #cccccc;
+    color: #34495e;
+    font-size: 22px;
+    opacity: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    transition: opacity 0.4s ease 0s;
+}
+#search-button:hover {
+    opacity: 0.2;
+}
+#search-button2 {
+    margin-left: 0;
+}
+.search-dropdown-cont {
+    background: none repeat scroll 0 0 #ffffff;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 11px;
+    position: absolute;
+    right: 33px;
+    top: 40px;
+    width: 444px;
+    z-index: 1020;
+}
+.search-dropdown-cont-single {
+    background: none repeat scroll 0 0 #ffffff;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 11px;
+    position: absolute;
+    top: 40px;
+    width: 1147px;
+    z-index: 1020;
+}
+.search-dropdown-arrow i {
+    vertical-align: top;
+}
+.search-dropdown-arrow-single i {
+    vertical-align: top;
+}
+.search-dropdown-arrow i.icon-sort-up {
+    vertical-align: middle;
+}
+.search-dropdown-arrow-single i.icon-sort-up {
+    vertical-align: middle;
+}
+#container-search .row {
+    background: none repeat scroll 0 0 #fff;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 1px 0;
+}
