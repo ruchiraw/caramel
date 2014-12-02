@@ -41,7 +41,7 @@
                         <span data-toggle="tooltip" title="Bootstrap version">3.0.3</span>
                     </span>
                 </h4>
-                <img src="http://www.remabledesigns.com/bootsnipp/img/201402031258.png" alt="...">
+                <img src="http://www.remabledesigns.com/bootsnipp/img/201402031306.png" alt="...">
                 <a href="http://bootsnipp.com/snippets/featured/portfolio-using-panels" class="btn btn-primary col-xs-12" role="button">Details</a>
                 <div class="clearfix"></div>
             </div>
@@ -95,3 +95,12 @@
             </div>
         </div>
     </div>
+<ul class="pagination">
+    <li class="disabled"><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul>

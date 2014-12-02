@@ -108,18 +108,18 @@ var styles, scripts, config, themeScripts, themeStyles, path, api,
     themeScripts = function () {
         var opts = config('theme');
         var theme = opts.active;
-        var path = '/themes/' + theme + '/js/scripts.js';
-        if (new File(path).isExists()) {
-            print(scriptSource(path));
+        var p = '/themes/' + theme + '/js/scripts.js';
+        if (new File(p).isExists()) {
+            print(scriptSource(path(p)));
         }
     };
 
     themeStyles = function () {
         var opts = config('theme');
         var theme = opts.active;
-        var path = '/themes/' + theme + '/css/styles.css';
-        if (new File(path).isExists()) {
-            print(styleSource(path));
+        var p = '/themes/' + theme + '/css/styles.css';
+        if (new File(p).isExists()) {
+            print(styleSource(path(p)));
         }
     };
 
