@@ -1,6 +1,13 @@
 <%
 var component = require('/components/component.js');
 
+/**
+ * This is just to hold any runtime contexts that need to be passed
+ * into components
+ * @type {{}}
+ */
+var context = {};
+
 (function () {
     var log = new Log();
 
@@ -30,6 +37,16 @@ var component = require('/components/component.js');
                 return false;
             }
             res.contentType = 'text/css';
+            print(file.getStream());
+            return true;
+        }
+        if (path.match(/(.jpg)$/ig)) {
+            //css file
+            file = new File(path);
+            if (!file.isExists() || file.isDirectory()) {
+                return false;
+            }
+            res.contentType = 'image/jpeg';
             print(file.getStream());
             return true;
         }

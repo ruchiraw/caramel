@@ -1,14 +1,16 @@
 <%
-var navigation = {};
-
-navigation.top = {
-    siteName: 'WSO2 Cloud',
-    links: [
-        { title: 'Home', url: '/caramel/index'},
-        { title: 'Login', url: '/caramel/login'},
-        { title: 'Logout', url: '/caramel/components/login/local/logout'}
+context.navigation = {
+    home: {
+        title: 'Store',
+        url: '/index'
+    },
+    left: [
+        { title: 'Browse', url: '/home'},
+        { title: 'Details', url: '/assets'}
+    ],
+    right: [
+        { title: 'Login', url: '/login'},
+        { title: 'Register', url: '/signup'}
     ]
 };
-
-navigation.side = [];
 %>

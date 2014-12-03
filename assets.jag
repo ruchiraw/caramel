@@ -1,4 +1,4 @@
-<% context.breadcrumb = [{ title: 'Home', url: '/home'}, { title: 'Assets', url: '/assets'}]; %>
+<% context.breadcrumb = [{ title: 'Home', url: '/home'}, { title: 'Assets', url: '/assets'}, { title: 'Google Search', url: '/google'}]; %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,11 +6,7 @@
     <title>Store | Home</title>
     <% component.styles('navigation'); %>
     <% component.styles('breadcrumb'); %>
-    <% component.styles('popup'); %>
-    <% component.styles('self-signup'); %>
-    <% component.styles('login'); %>
     <% component.styles('asset-details'); %>
-    <% component.styles('asset-list'); %>
     <% component.styles('asset-recent'); %>
     <% include('/includes/header.jag'); %>
     <% component.themeStyles(); %>
@@ -22,12 +18,7 @@
         <div class="row">
           <div class="col-lg-9">
                 <% component.include('breadcrumb'); %>
-                <h1>Browse Assets</h1>
-                <% component.include('popup'); %>
-                <% component.include('self-signup'); %>
-                <% component.include('login', 'local'); %>
                 <% component.include('asset-details'); %>
-                <% component.include('asset-list'); %>
           </div>
           <div class="col-lg-3">
                 <% component.include('asset-recent'); %>
@@ -39,11 +30,7 @@
     <% include('/includes/footer.jag'); %>
     <% component.scripts('navigation'); %>
     <% component.scripts('breadcrumb'); %>
-    <% component.scripts('popup'); %>
-    <% component.scripts('self-signup'); %>
-    <% component.scripts('login'); %>
     <% component.scripts('asset-details'); %>
-    <% component.scripts('asset-list'); %>
     <% component.scripts('asset-recent'); %>
     <% component.themeScripts(); %>
   </body>

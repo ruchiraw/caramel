@@ -1,21 +1,27 @@
-<% include('/includes/common.jag'); %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dashboard Template for Bootstrap</title>
-    <% include('/includes/header.jag'); %>
+    <meta charset="utf-8">
+    <title>Store | Home</title>
     <% component.styles('self-signup'); %>
+    <% include('/includes/header.jag'); %>
+    <% component.themeStyles(); %>
   </head>
   <body>
-    <% component.include('navigation', 'top', navigation.top); %>
+    <% component.include('navigation', 'top'); %>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <% component.include('self-signup'); %>
+      <div class="section">
+        <div class="row">
+          <div class="col-lg-offset-2 col-lg-8">
+                <% component.include('self-signup'); %>
+          </div>
         </div>
       </div>
+      <% component.include('footer'); %>
     </div>
     <% include('/includes/footer.jag'); %>
+    <% component.scripts('navigation'); %>
     <% component.scripts('self-signup'); %>
+    <% component.themeScripts(); %>
   </body>
 </html>

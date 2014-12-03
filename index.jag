@@ -1,37 +1,36 @@
-<!-- TODO feature inclusion like sso etc. -->
-<% component.include('login', 'authenticate'); %>
-<% include('/includes/common.jag'); %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dashboard Template for Bootstrap</title>
-    <% include('/includes/header.jag'); %>
+    <meta charset="utf-8">
+    <title>Store | Home</title>
     <% component.styles('navigation'); %>
-    <% component.styles('commit-history'); %>
-    <% component.styles('current-time'); %>
-    <% component.styles('usage-dashboard'); %>
+    <% component.styles('breadcrumb'); %>
+    <% component.styles('asset-list'); %>
+    <% include('/includes/header.jag'); %>
     <% component.themeStyles(); %>
   </head>
   <body>
-    <% component.include('navigation', 'top', navigation.top); %>
+    <% component.include('navigation', 'top'); %>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <% component.include('navigation', 'side', navigation.side); %>
-        </div>
-        <div class="col-sm-9 col-md-10">
-        <!-- TODO include with the context -->
-            <% component.include('commit-history'); %>
-            <% component.include('current-time'); %>
-            <% component.include('usage-dashboard', 'charts'); %>
-            <% component.include('usage-dashboard', 'table'); %>
+      <div class="section">
+        <div class="row">
+          <div class="col-lg-9">
+                <% component.include('breadcrumb'); %>
+                <h1>Browse Assets</h1>
+                <% component.include('asset-list'); %>
+          </div>
+          <div class="col-lg-3">
+                <% component.include('asset-recent'); %>
+          </div>
         </div>
       </div>
+      <% component.include('footer'); %>
     </div>
     <% include('/includes/footer.jag'); %>
     <% component.scripts('navigation'); %>
-    <% component.scripts('commit-history'); %>
-    <% component.scripts('current-time'); %>
+    <% component.scripts('breadcrumb'); %>
+    <% component.scripts('asset-list'); %>
+    <% component.scripts('asset-recent'); %>
     <% component.themeScripts(); %>
   </body>
 </html>
