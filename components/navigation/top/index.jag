@@ -36,17 +36,27 @@ if(nav) {
       </ul>
     <% } %>
 
-    <% if(nav.right) { %>
+
       <ul class="nav navbar-nav navbar-right">
-        <%
+      <% if(nav.right) {
         nav.right.forEach(function(link) {
         %>
         <li>
           <a href="<%=component.path(link.url)%>"><%=link.title%></a>
         </li>
       <% }); %>
-      </ul>
+      <% } else {
+        var user = component.api('login').user();
+        if(user) {
+      %>
+        <li><a href=""><%=user%></a></li>
+        <li><a href="<%=component.path("local/logout", "login")%>">Logout</a></li>
+      <% } else { %>
+        <li><a href="<%=component.path("/login")%>">Login</a></li>
+        <li><a href="">Register</a></li>
       <% } %>
+      <% } %>
+      </ul>
     </div>
   </div>
 </div>

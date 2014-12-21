@@ -8,7 +8,7 @@ context.navigation = {
         { title: 'Browse', url: '/home'},
         { title: 'Details', url: '/assets'}
     ],
-    right: [
+    rightbk: [
         { title: 'Login', url: '/login'},
         { title: 'Register', url: '/signup'}
     ]

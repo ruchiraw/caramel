@@ -1,16 +1,16 @@
-<form class="form-horizontal">
+<form class="form-horizontal" action="<%=component.path("local/login", "login")%>">
   <fieldset>
     <legend>Sign In</legend>
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+        <input type="text" class="form-control" id="inputEmail" name="username" placeholder="Email">
       </div>
     </div>
     <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Password</label>
       <div class="col-lg-10">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
         <div class="checkbox">
           <label>
             <input type="checkbox"> Remember me

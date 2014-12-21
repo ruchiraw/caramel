@@ -1,4 +1,4 @@
-<h2 id="nav-tabs">Details</h2>
+<h2 id="nav-tabs">Google Search</h2>
 <div class="asset-banner">
   <img src="<%= component.path('winter_snow_800.jpg', 'asset-details') %>"/>
 </div>
