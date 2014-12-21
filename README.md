@@ -55,4 +55,8 @@ versions of the same *.js component
 
 component.api('login'); // this is to get currently logged in user from login component to navigation componet.
 
+or
+
+context.login.user might be more simpler as well.
+
 

@@ -61,24 +61,44 @@ var context = {};
         if (statik(req, res, path)) {
             return;
         }
+        //TODO: remove following check
         var compDir = new File(compPath);
         if (!compDir.isExists() || !compDir.isDirectory()) {
             log.error('components directory cannot found');
             return;
         }
+        path = find(path);
+        if (path) {
+            include(path);
+            return;
+        }
+        response.sendError(404, 'Requested endpoint cannot be found');
+    };
+
+    var find = function (path) {
+        var index;
+        var file = new File(path);
+        if (file.isExists()) {
+            return file.isDirectory() ? dir(path) : path;
+        }
+        //TODO: is this correct
+        path = path + '.jag';
         file = new File(path);
-        if (!file.isExists()) {
-            //TODO: is this correct
-            path = path + '.jag';
-            file = new File(path);
-            if (!file.isExists()) {
-                return;
-            }
+        if (file.isExists()) {
+            return file.isDirectory() ? dir(path) : path;
         }
-        if (file.isDirectory()) {
-            //TODO: handle index.jag
+        index = path.lastIndexOf('/');
+        if (index === -1) {
+            return null;
         }
-        include(path);
+        path = path.substring(0, index);
+        return find(path);
+    };
+
+    var dir = function (path) {
+        var file = new File(path + '/index.jag');
+        //TODO
+        return null;
     };
 
     serve(request, response);
