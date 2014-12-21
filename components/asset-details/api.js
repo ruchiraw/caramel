@@ -11,4 +11,5 @@ var asset = function () {
         name: (parseInt(id) % 2) ? 'Google Search' : 'Yahoo Search',
         description: 'This is a search gadget by WSO2.'
     };
+    return asset;
 };

@@ -1,4 +1,5 @@
-<% context.breadcrumb = [{ title: 'Home', url: '/home'}, { title: 'Assets', url: '/assets'}, { title: 'Google Search', url: '/google'}]; %>
+<% var asset = component.api('asset-details').asset(); %>
+<% context.breadcrumb = [{ title: 'Home', url: '/home'}, { title: 'Assets', url: '/assets'}, { title: asset.name, url: '/google'}]; %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
