@@ -59,4 +59,6 @@ or
 
 context.login.user might be more simpler as well.
 
+Can get data either from URL/request directly or from the API of another component.
+
 

@@ -1,15 +1,14 @@
 var log = new Log();
 var asset = function () {
     var matcher = new URIMatcher(request.getRequestURI());
-    var asset, id;
+    var assets, id;
     if (!matcher.match('/{ctx}/assets/{id}')) {
         return null;
     }
-    id = matcher.elements().id;
-    asset = {
-        id: id,
-        name: (parseInt(id) % 2) ? 'Google Search' : 'Yahoo Search',
-        description: 'This is a search gadget by WSO2.'
-    };
-    return asset;
+    id = parseInt(matcher.elements().id, 10);
+    assets = component.api('asset-list').assets();
+    if (id >= assets.length) {
+        return null;
+    }
+    return assets[id];
 };
